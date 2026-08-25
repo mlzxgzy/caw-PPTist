@@ -2,7 +2,8 @@ import axios from './axios'
 import fetchRequest from './fetch'
 
 // export const SERVER_URL = 'http://localhost:5000'
-export const SERVER_URL = (import.meta.env.MODE === 'development') ? '/api' : 'https://server.pptist.cn'
+// CAW 定制：AI 服务统一走同源 /api，由 course-agent-workbench 后端实现同协议端点（见宿主 docs/pptist-integration-spec.md）
+export const SERVER_URL = '/api'
 
 interface ImageSearchPayload {
   query: string;
