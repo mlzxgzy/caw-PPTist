@@ -52,19 +52,8 @@
             ]"
           />
         </div>
-        <div class="config-item">
-          <div class="label">模型：</div>
-          <Select 
-            class="config-content"
-            style="width: 190px;"
-            v-model:value="model"
-            :options="[
-              { label: 'Qwen3.7-Flash', value: 'qwen:qwen3.7-flash' },
-              { label: 'Doubao-Seed-2.0-mini', value: 'doubao:doubao-seed-2.0-mini' },
-              { label: 'DeepSeek-v4-Flash', value: 'qwen:deepseek-v4-flash-0731' },
-            ]"
-          />
-        </div>
+        <!-- CAW 定制 #2：模型选择下拉隐藏——服务端（course-agent-workbench /api/tools/*）
+             统一使用本地已配置模型，忽略 provider/model 参数；保留 model 默认值供请求体组装 -->
         <div class="config-item">
           <div class="label">配图：</div>
           <Select 
